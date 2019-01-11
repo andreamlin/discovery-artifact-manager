@@ -52,7 +52,6 @@ interfaces:
         - shelf
     required_fields:
     - shelf
-    request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -69,14 +68,12 @@ interfaces:
     - message
     - string_builder
     - options
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
       name: book_shelf
     timeout_millis: 60000
   - name: ListShelves
-    request_object_method: true
     page_streaming:
       request:
         token_field: page_token
@@ -93,7 +90,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -108,7 +104,6 @@ interfaces:
     required_fields:
     - name
     - other_shelf_name
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -123,7 +118,6 @@ interfaces:
     required_fields:
     - name
     - book
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -136,7 +130,6 @@ interfaces:
     - edition
     - review_copy
     - series_uuid
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -147,7 +140,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -162,7 +154,6 @@ interfaces:
     required_fields:
     - name
     - filter
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -182,7 +173,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -201,7 +191,6 @@ interfaces:
     - book
     - update_mask
     - physical_mask
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -216,7 +205,6 @@ interfaces:
     required_fields:
     - name
     - other_shelf_name
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -229,7 +217,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -249,7 +236,6 @@ interfaces:
     required_fields:
     - name
     - comments
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -262,7 +248,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -277,7 +262,6 @@ interfaces:
     required_fields:
     - name
     - alt_book_name
-    request_object_method: true
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -294,14 +278,12 @@ interfaces:
     - name
     - index_name
     - index_map
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
       name: book_2
     timeout_millis: 60000
   - name: StreamShelves
-    request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -312,7 +294,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -325,7 +306,6 @@ interfaces:
     required_fields:
     - name
     - comment
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -338,7 +318,6 @@ interfaces:
     required_fields:
     - name
     - comment
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -351,7 +330,6 @@ interfaces:
     required_fields:
     - names
     - shelves
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -371,7 +349,6 @@ interfaces:
     required_fields:
     - resource
     - tag
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     field_name_patterns:
@@ -384,7 +361,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -397,7 +373,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     field_name_patterns:
@@ -459,7 +434,6 @@ interfaces:
     - optional_repeated_fixed32
     - optional_repeated_fixed64
     - optional_map
-    request_object_method: true
     retry_codes_name: non_idempotent
     retry_params_name: default
     timeout_millis: 60000

@@ -30,7 +30,6 @@ public class FieldConfigGenerator implements MethodConfigGenerator {
   private static final String CONFIG_KEY_PARAMETERS = "parameters";
   private static final String CONFIG_KEY_FLATTENING = "flattening";
   private static final String CONFIG_KEY_REQUIRED_FIELDS = "required_fields";
-  private static final String CONFIG_KEY_REQUEST_OBJECT_METHOD = "request_object_method";
 
   private static final String PARAMETER_PAGE_TOKEN = "page_token";
   private static final String PARAMETER_PAGE_SIZE = "page_size";
@@ -60,14 +59,6 @@ public class FieldConfigGenerator implements MethodConfigGenerator {
         result.put(CONFIG_KEY_FLATTENING, createFlatteningConfig(parameterList));
       }
       result.put(CONFIG_KEY_REQUIRED_FIELDS, new LinkedList<String>(parameterList));
-    }
-    // use all fields for the following check; if there are ignored fields for flattening
-    // purposes, the caller still needs a way to set them (by using the request object method).
-    if (message.getFields().size() > REQUEST_OBJECT_METHOD_THRESHOLD
-        || message.getFields().size() != parameterList.size()) {
-      result.put(CONFIG_KEY_REQUEST_OBJECT_METHOD, true);
-    } else {
-      result.put(CONFIG_KEY_REQUEST_OBJECT_METHOD, false);
     }
     return result;
   }

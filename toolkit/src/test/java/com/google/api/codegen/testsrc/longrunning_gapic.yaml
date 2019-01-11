@@ -49,7 +49,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -62,7 +61,6 @@ interfaces:
     required_fields:
     - name
     - filter
-    request_object_method: true
     page_streaming:
       request:
         page_size_field: page_size
@@ -80,7 +78,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000
@@ -91,7 +88,6 @@ interfaces:
         - name
     required_fields:
     - name
-    request_object_method: false
     retry_codes_name: idempotent
     retry_params_name: default
     timeout_millis: 60000

@@ -71,7 +71,6 @@ interfaces:
   #       message.
   #   required_fields - Fields that are always required for a request to be
   #       valid.
-  #   request_object_method - Turns on or off the generation of a method whose
   #       sole parameter is a request object. Not all languages will generate
   #       this method.
   #   resource_name_treatment - An enum that specifies how to treat the
@@ -116,7 +115,6 @@ interfaces:
         - address
     required_fields:
     - address
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: idempotent
     retry_params_name: default
@@ -130,7 +128,6 @@ interfaces:
         - address
     required_fields:
     - address
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: idempotent
     retry_params_name: default
@@ -146,7 +143,6 @@ interfaces:
     required_fields:
     - region
     - addressResource
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
     retry_codes_name: non_idempotent
     retry_params_name: default
@@ -160,7 +156,6 @@ interfaces:
         - region
     required_fields:
     - region
-    request_object_method: true
     resource_name_treatment: STATIC_TYPES
     page_streaming:
       request:
